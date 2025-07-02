@@ -1,0 +1,39 @@
+<odoo>
+
+    <record id="action_vehiculo_historial" model="ir.actions.act_window">
+        <field name="name">Historial</field>
+        <field name="res_model">vehiculos.historial</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_vehiculo_historial_tree" model="ir.ui.view">
+        <field name="name">vehiculos.historial.list</field>
+        <field name="model">vehiculos.historial</field>
+        <field name="type">list</field>
+        <field name="arch" type="xml">
+            <list string="Historial">
+                <field name="descripcion"/>
+                <field name="fecha"/>
+                <field name="vehiculo_id"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Vista de formulario -->
+    <record id="view_vehiculo_historial_form" model="ir.ui.view">
+        <field name="name">vehiculos.historial.form</field>
+        <field name="model">vehiculos.historial</field>
+        <field name="arch" type="xml">
+            <form string="Historial">
+                <sheet>
+                    <group>
+                        <field name="descripcion"/>
+                        <field name="fecha"/>
+                        <field name="vehiculo_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

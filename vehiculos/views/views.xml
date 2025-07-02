@@ -1,0 +1,18 @@
+<odoo>
+
+  <!-- Menús -->
+    <menuitem id="vehiculo_menu_root" name="Vehiculos"/>
+    <menuitem id="vehiculo_menu" name="Vehículos" parent="vehiculo_menu_root" action="action_vehiculos"/>
+
+
+  <!-- Menú para propietarios -->
+    <menuitem id="menu_propietario" name="Propietarios" parent="vehiculo_menu_root" action="action_propietarios"/>
+
+    <menuitem id="vehiculo_submenu" name="Vehiculos" parent="vehiculo_menu" action="action_vehiculos"/>
+
+    <menuitem id="menu_vehiculo_historial"
+              name="Historial"
+              parent="vehiculo_menu"
+              action="action_vehiculo_historial"
+              sequence="20" />
+</odoo>

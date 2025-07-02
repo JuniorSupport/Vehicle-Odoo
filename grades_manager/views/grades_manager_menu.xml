@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="grades_course_action" model="ir.actions.act_window">
+        <field name="name">Courses</field>
+        <field name="res_model">grades.course</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem
+        id="model_grades_manager_menu"
+        name="Grades Manager"
+        sequence="10"/>
+    
+    <menuitem
+        id="model_grades_course_menu"
+        name="Course"
+        parent="model_grades_manager_menu"
+        sequence="10" action="grades_course_action" />
+
+    
+    <record id="view_grades_course_list" model="ir.ui.view">
+        <field name="name">grades.course.list</field>
+        <field name="model">grades.course</field>
+        <field name="type">list</field>
+        <field name="arch" type="xml">
+            <list string="Courses">
+                <field name="name"></field>
+                <field name="student_qy"></field>
+                <field name="description"></field>
+                <field name="grades_average"></field>
+                <field name="is_active"></field>
+                <field name="course_start"></field>
+                <field name="course_end"></field>
+                <field name="last_evaluation_date"></field>
+                <field name="course_shift"></field>
+            </list>
+        </field>
+    </record>
+    
+    <record id="view_grades_course_form" model="ir.ui.view">
+        <field name="name">grades.course.form</field>
+        <field name="model">grades.course</field>
+        <field name="arch" type="xml">
+            <form string="Courses">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"></field>
+                            <field name="description"></field>
+                            <field name="course_start"></field>
+                            <field name="course_end"></field>             
+                        </group>
+                        <group>
+                            <field name="course_image"></field>
+                            <field name="student_qy"></field>
+                            <field name="is_active"></field>
+                            <field name="last_evaluation_date"></field>
+                            <field name="course_shift"></field>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

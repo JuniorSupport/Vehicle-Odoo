@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Acción para abrir vista de propietarios -->
+    <record id="action_propietarios" model="ir.actions.act_window">
+        <field name="name">Propietarios</field>
+        <field name="res_model">vehiculos.propietario</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+
+    <!-- Vista formulario de Propietario -->
+    <record id="view_propietario_form" model="ir.ui.view">
+        <field name="name">vehiculos.propietario.form</field>
+        <field name="model">vehiculos.propietario</field>
+        <field name="arch" type="xml">
+            <form string="Propietario">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="dni"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vista (lista) de Propietarios -->
+    <record id="view_propietario_tree" model="ir.ui.view">
+        <field name="name">vehiculos.propietario.list</field>
+        <field name="model">vehiculos.propietario</field>
+        <field name="type">list</field>
+        <field name="arch" type="xml">
+            <list string="Propietarios">
+                <field name="name"/>
+                <field name="dni"/>
+                <field name="vehiculo_marca"/>
+            </list>
+        </field>
+    </record>
+
+
+</odoo>
