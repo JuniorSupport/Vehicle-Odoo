@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <record id="vehiculos.action_prueba" model="ir.actions.act_window">
+    <field name="name">Prueba Vehículos</field>
+    <field name="res_model">vehiculos.prueba</field>
+    <field name="view_mode">form</field>
+  </record>
+
+  <record id="view_form_vehiculos_prueba" model="ir.ui.view">
+    <field name="name">vehiculos.prueba.form</field>
+    <field name="model">vehiculos.prueba</field>
+    <field name="arch" type="xml">
+      <form string="Prueba Vehículos">
+        <sheet>
+          <group>
+            <field name="name"/>
+          </group>
+            <button name="vehiculos_actuales" string="Acción" type="object" class="btn-primary"/>
+        </sheet>
+      </form>
+    </field>
+  </record>
+</odoo>

@@ -1,6 +1,6 @@
 <odoo>
 
-    <record id="action_vehiculo_historial" model="ir.actions.act_window">
+    <record id="vehiculos.action_vehiculo_historial" model="ir.actions.act_window">
         <field name="name">Historial</field>
         <field name="res_model">vehiculos.historial</field>
         <field name="view_mode">list,form</field>
@@ -14,7 +14,7 @@
             <list string="Historial">
                 <field name="descripcion"/>
                 <field name="fecha"/>
-                <field name="vehiculo_id"/>
+                <field name="vehiculo_marca"/>
             </list>
         </field>
     </record>
@@ -29,7 +29,7 @@
                     <group>
                         <field name="descripcion"/>
                         <field name="fecha"/>
-                        <field name="vehiculo_id"/>
+                        <field name="vehiculo_marca"/>
                     </group>
                 </sheet>
             </form>

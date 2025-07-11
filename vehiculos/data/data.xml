@@ -1,0 +1,33 @@
+<odoo>
+    <data>
+        <record id="propietario_john" model="vehiculos.propietario">
+            <field name="name">John Doe</field>
+            <field name="dni">755908722</field>
+        </record>
+
+        <record id="propietario_anna" model="vehiculos.propietario">
+            <field name="name">Anna Smith</field>
+            <field name="dni">10124566</field>
+        </record>
+
+        <record id="vehiculo_1" model="vehiculos.vehiculo">
+            <field name="marca">Toyota</field>
+            <field name="modelo">Corolla</field>
+            <field name="anio">2020</field>
+            <field name="color">Rojo</field>
+            <field name="placa">CSV-124</field>
+            <field name="estado">disponible</field>
+            <field name="propietario_id" ref="propietario_john"/>
+        </record>
+
+        <record id="vehiculo_2" model="vehiculos.vehiculo">
+            <field name="marca">Honda</field>
+            <field name="modelo">Civic</field>
+            <field name="anio">2019</field>
+            <field name="color">Azul</field>
+            <field name="placa">XAZ-987</field>
+            <field name="estado">vendido</field>
+            <field name="propietario_id" ref="propietario_anna"/>
+        </record>
+    </data>
+</odoo>

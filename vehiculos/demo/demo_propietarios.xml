@@ -1,0 +1,8 @@
+<odoo>
+    <data noupdate="1">
+        <record id="vehiculos_demo_propietario" model="vehiculos.propietario">
+            <field name="name">Propietario Demo</field>
+            <field name="dni">99999999</field>
+        </record>
+    </data>
+</odoo>

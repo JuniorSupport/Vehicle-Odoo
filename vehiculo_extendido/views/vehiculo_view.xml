@@ -1,0 +1,15 @@
+<odoo>
+    <record id="view_form_vehiculo_extendido" model="ir.ui.view">
+        <field name="name">vehiculos.vehiculo.form.extendido</field>
+        <field name="model">vehiculos.vehiculo</field>
+        <field name="inherit_id" ref="vehiculos.view_vehiculo_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet/group" position="inside">
+                <field name="fecha_mantenimiento"/>
+                <button name="check_mantenimiento_automatico"
+                        string="Verificar mantenimiento automático"
+                        type="object"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

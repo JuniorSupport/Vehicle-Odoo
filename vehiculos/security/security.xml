@@ -1,0 +1,24 @@
+<odoo>
+
+    <record id="module_category_vehiculos" model="ir.module.category">
+        <field name="name">Gestión de Vehículos</field>
+        <field name="sequence">10</field>
+    </record>
+
+    <record id="group_vehiculos_manager" model="res.groups">
+        <field name="name">Vehículos Manager</field>
+        <field name="category_id" ref="vehiculos.module_category_vehiculos"/>
+        <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+    </record>
+
+
+    <record id="group_vehiculos_user" model="res.groups">
+        <field name="name">Vehículos User</field>
+        <field name="category_id" ref="vehiculos.module_category_vehiculos"/>
+    </record>
+
+    <record id="group_vehiculos_tecnico" model="res.groups">
+        <field name="name">Vehículos Técnico</field>
+        <field name="category_id" ref="vehiculos.module_category_vehiculos"/>
+    </record>
+</odoo>

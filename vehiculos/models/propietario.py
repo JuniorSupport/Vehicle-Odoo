@@ -18,5 +18,4 @@ class Propietario(models.Model):
             marcas=record.vehiculo_ids.mapped("marca")
             record.vehiculo_marca = ", ".join(marcas)
 
-
     

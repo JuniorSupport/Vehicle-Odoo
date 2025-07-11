@@ -1,4 +1,16 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_vehiculos_vehiculo,vehiculos.vehiculo,model_vehiculos_vehiculo,base.group_user,1,1,1,1
-access_vehiculos_propietario,vehiculos.propietario,model_vehiculos_propietario,base.group_user,1,1,1,1
-access_vehiculos_historial_user,access_vehiculos_historial_user,model_vehiculos_historial,,1,1,1,1
+
+access_vehiculo_manager,vehiculo manager,model_vehiculos_vehiculo,vehiculos.group_vehiculos_manager,1,1,1,1
+access_vehiculo_user,vehiculo user,model_vehiculos_vehiculo,vehiculos.group_vehiculos_user,1,0,0,0
+access_vehiculo_tecnico_read,vehiculo tecnico read,model_vehiculos_vehiculo,vehiculos.group_vehiculos_tecnico,1,0,0,0
+
+
+access_historial_manager,historial manager,model_vehiculos_historial,vehiculos.group_vehiculos_manager,1,1,1,1
+access_historial_tecnico,historial tecnico,model_vehiculos_historial,vehiculos.group_vehiculos_tecnico,1,1,1,0
+
+
+access_propietario_manager,propietario manager,model_vehiculos_propietario,vehiculos.group_vehiculos_manager,1,1,1,1
+access_propietario_user,propietario user,model_vehiculos_propietario,vehiculos.group_vehiculos_user,1,0,0,0
+access_propietario_tecnico_read,propietario tecnico read,model_vehiculos_propietario,vehiculos.group_vehiculos_tecnico,1,0,0,0
+
+access_vehiculos_prueba_manager,vehiculos prueba manager,model_vehiculos_prueba,vehiculos.group_vehiculos_manager,1,1,1,1

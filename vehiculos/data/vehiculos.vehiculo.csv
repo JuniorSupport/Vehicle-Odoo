@@ -1,0 +1,3 @@
+id,marca,modelo,anio,color,placa,estado,propietario_id
+vehiculo_demo_toyota,Toyota,Rush,2013,Azul,ATE-128,Disponible,John Doe
+

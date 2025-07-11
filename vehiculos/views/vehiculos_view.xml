@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <!-- Acción (debe ir primero, para que el menuitem la encuentre) -->
-    <record id="action_vehiculos" model="ir.actions.act_window">
+    <record id="view_vehiculos_vehiculo_search" model="ir.ui.view">
+        <field name="name">vehiculos.vehiculo.search</field>
+        <field name="model">vehiculos.vehiculo</field>
+        <field name="arch" type="xml">
+            <search>
+                <!-- Aquí defines los campos visibles en el buscador -->
+                <field name="placa"/>
+                <field name="marca"/>
+                <field name="modelo"/>
+                <field name="anio"/>
+                <field name="color"/>
+                <field name="propietario_id"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="vehiculos.action_vehiculos" model="ir.actions.act_window">
         <field name="name">Vehiculo</field>
         <field name="res_model">vehiculos.vehiculo</field>
         <field name="view_mode">list,form</field>
@@ -42,16 +57,6 @@
                         <field name="fecha_venta"/>
                         <field name="propietario_id"/>
                     </group>
-                <!--    <group col="1">
-                        <separator string="Historial"/>
-                        <field name="historial_ids" nolabel="1">
-                            <list>
-                                <field name="descripcion"/>
-                                <field name="fecha"/>
-                                <field name="vehiculo_id"/>
-                            </list>
-                        </field>
-                    </group>-->
                     <notebook>
                       <page string="Historial">
                         <field name="historial_ids" nolabel="1">
